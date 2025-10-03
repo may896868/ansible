@@ -15,4 +15,4 @@
   tasks:
   - name: print the course info
     ansible.builtin.debug:
-      msg: "Course name: {{ Course }}, Duration: {{ Duration }}, is it live?: {{ is_live }}, tools are: {{ tools }} concepts are: {{ concepts }}"
+      msg: "Course name: {{ COURSE }}, Duration: {{ DURATION }}, is it live?: {{ IS_LIVE }}, tools are: {{ tools }} concepts are: {{ concepts }}"

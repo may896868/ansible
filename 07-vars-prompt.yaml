@@ -1,7 +1,7 @@
 - name: variables with prompts
   hosts: local
   connection: local
-  vars_prompts:
+  vars_prompt:
   - name: username
     prompt: what is your name?
     private: false

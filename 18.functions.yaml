@@ -3,6 +3,9 @@
   connection: local
   vars:
     technologies: ansible, aws, shell, linux
+    tags:
+      Application: payment
+      Enrollment: dev
   tasks:
   - name: default variable
     ansible.builtin.debug:
@@ -11,3 +14,7 @@
   - name: string to list
     ansible.builtin.debug:
       msg: "technologies are : {{ technologies | split(',') }}"
+
+  - name: string to list
+    ansible.builtin.debug:
+      msg: "tags are : {{ tags | dict2items }}"     

@@ -5,7 +5,7 @@
     technologies: ansible, aws, shell, linux
     name: "Narayana Prasad"
     email: GnP2003@gmail.com
-    ipaddress: 355.765.999.212
+    ipaddress: 255.255.255.212
     tags:
       Application: payment
       Enrollment: dev

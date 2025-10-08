@@ -3,6 +3,8 @@
   connection: local
   vars:
     technologies: ansible, aws, shell, linux
+    name: "Narayana Prasad"
+    email: GnP2003@gmail.com
     tags:
       Application: payment
       Enrollment: dev
@@ -39,3 +41,11 @@
     ansible.builtin.copy:
       dest: ./stundent-data.json
       content: "{{ student_yaml | to_nice_json  }}"
+
+  - name: convert to upper case
+    ansible.builtin.debug:
+    msg: "{{ name | upper }}"
+
+  - name: convert to lower case
+    ansible.builtin.debug:
+    msg: "{{ email | lower }}"

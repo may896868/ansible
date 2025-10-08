@@ -1,7 +1,13 @@
 - name: function
   hosts: local
   connection: local
+  vars:
+    technologies: ansible, aws. shell. linux
   tasks:
   - name: default variable
     ansible.builtin.debug:
       msg: "Hello, {{ name | default( 'ramesh')}}"
+
+  - name: string to list
+    ansible.builtin.debug:
+      msg: "technologies are : {{ technologies | split(',')}}"

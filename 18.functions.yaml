@@ -72,12 +72,12 @@
     ansible.builtin.debug:
       msg: "{{ redirect_output }}"
 
-  - name: redirect the output
+  - name: checking ls command and keeping result in output
     ansible.builtin.command: ls -ltr
-    register: redirect_output
+    register: command_output
     
-  - name: print redirect_output
+  - name: print ls command output
     ansible.builtin.debug:
-      msg: "{{ redirect_output }}"
+      msg: "{{ command_output }}"
 
 

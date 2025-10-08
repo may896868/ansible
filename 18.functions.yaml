@@ -5,6 +5,7 @@
     technologies: ansible, aws, shell, linux
     name: "Narayana Prasad"
     email: GnP2003@gmail.com
+    ipaddress: 355.765.999.212
     tags:
       Application: payment
       Enrollment: dev
@@ -49,3 +50,7 @@
   - name: convert to lower case
     ansible.builtin.debug:
       msg: "{{ email | lower }}"
+
+  - name: check IP is valid or not
+    ansible.builtin.debug: 
+      msg: "{{ ipaddress | ansible.utils.ipv4 }}"
